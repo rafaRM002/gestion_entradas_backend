@@ -12,16 +12,18 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Entrada {
+public class Ventas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id_entrada;
-    private String nombre;
-    private String descripcion;
-    private String tipo;
-    private Double precio;
     private Date fecha;
+    private Double total;
+    @Column(name = "metodo_pago", columnDefinition = "ENUM('EFECTIVO', 'TARJETA', 'BIZUM', 'GOOGLE_PAY)")
+    private String metodo_pago;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 
 }
