@@ -8,7 +8,11 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Date;
-
+@Entity
+@Table(name = "lineas_venta")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class LineaVenta {
 
         @Id
@@ -16,15 +20,15 @@ public class LineaVenta {
         @Column(name = "id")
         private int id;
 
-        @OneToMany
+        @ManyToOne
         @JoinColumn(name = "venta_id", nullable = false)
         private Ventas venta;
 
-        @OneToMany
+        @ManyToOne
         @JoinColumn(name = "producto_id", nullable = false)
         private Producto producto;
 
-        @OneToMany
+        @ManyToOne
         @JoinColumn(name = "entrada_id", nullable = false)
         private Entrada entrada;
 

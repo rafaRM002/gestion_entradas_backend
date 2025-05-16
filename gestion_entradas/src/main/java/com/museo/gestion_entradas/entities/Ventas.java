@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Table(name = "entrada")
+@Table(name = "ventas")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -20,7 +20,7 @@ public class Ventas {
     private int id_entrada;
     private Date fecha;
     private Double total;
-    @Column(name = "metodo_pago", columnDefinition = "ENUM('EFECTIVO', 'TARJETA', 'BIZUM', 'GOOGLE_PAY)")
+    @Column(name = "metodo_pago", columnDefinition = "ENUM('EFECTIVO', 'TARJETA', 'BIZUM', 'GOOGLE_PAY')")
     private String metodo_pago;
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
