@@ -1,15 +1,10 @@
-package com.museo.gestion_entradas.controller;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package com.museo.gestion_entradas.entities;
 import jakarta.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-import java.util.Date;
-
-import java.util.Optional;
 @Entity
 @Table(name = "usuarios")
 @Data
