@@ -12,14 +12,12 @@ public interface UsuarioService {
      */
     List<Usuario> ListarUsuarios();
 
-    Integer listarUsuariosActivos();
-
     /**
      * Se encarga de Listar un usuario en concreto
      * @Param recibe un usuario para su listado
      * @return retorna el usuario que quermos ver
      */
-    Usuario CrearActualizarUsuario(Usuario usuario);
+    Usuario crearUsuario(Usuario usuario);
 
     Usuario actualizarUsuario(Usuario usuario);
     /**
@@ -27,9 +25,5 @@ public interface UsuarioService {
      * @Param recibe un usuario para su eliminacion
      */
     void EliminarUsuario(int id);
-
-    Usuario BuscarUsuario(int id);
-
-    Boolean ExisteUsuario(String email);
 
 }
