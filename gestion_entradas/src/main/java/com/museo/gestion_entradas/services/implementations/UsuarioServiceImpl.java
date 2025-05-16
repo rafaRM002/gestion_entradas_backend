@@ -15,7 +15,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     private UsuarioRepository usuarioRepository;
 
     @Override
-    public List<Usuario> ListarUsuarios() {
+    public List<Usuario> listarUsuarios() {
         return usuarioRepository.findAll();
     }
 
@@ -30,7 +30,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void EliminarUsuario(int id) {usuarioRepository.deleteById(id);}
+    public void eliminarUsuario(int id) {usuarioRepository.deleteById(id);}
 
 }
 
