@@ -26,4 +26,6 @@ public interface UsuarioService {
      */
     void eliminarUsuario(int id);
 
+    Usuario findByUsername(String username);
+
 }
