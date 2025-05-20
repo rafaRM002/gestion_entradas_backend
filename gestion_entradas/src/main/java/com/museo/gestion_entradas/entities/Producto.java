@@ -28,4 +28,8 @@ public class Producto {
 
     private Integer stock;
 
+    @ManyToOne
+    @JoinColumn(name = "establecimiento_id", nullable = false)
+    private Establecimiento establecimiento;
+
 }

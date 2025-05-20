@@ -23,5 +23,8 @@ public class Entrada {
     private String tipo;
     private Double precio;
     private Date fecha;
+    @ManyToOne
+    @JoinColumn(name = "establecimiento_id", nullable = false)
+    private Establecimiento establecimiento;
 
 }

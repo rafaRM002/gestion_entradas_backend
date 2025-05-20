@@ -17,5 +17,8 @@ public class Extras {
     @Column(name = "id")
     private int id;
     private String nombre,descripcion;
+    @ManyToOne
+    @JoinColumn(name = "establecimiento_id", nullable = false)
+    private Establecimiento establecimiento;
 
 }

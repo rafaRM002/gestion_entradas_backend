@@ -25,5 +25,8 @@ public class Ventas {
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
+    @ManyToOne
+    @JoinColumn(name = "establecimiento_id", nullable = false)
+    private Establecimiento establecimiento;
 
 }
