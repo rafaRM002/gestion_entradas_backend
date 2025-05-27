@@ -2,6 +2,7 @@ package com.museo.gestion_entradas.services;
 
 import com.museo.gestion_entradas.entities.Establecimiento;
 import com.museo.gestion_entradas.entities.ExtrasProductos;
+import com.museo.gestion_entradas.entities.Usuario;
 
 import java.util.List;
 
@@ -27,5 +28,6 @@ public interface EstablecimientoService {
      */
     void eliminarEstablecimiento(int id);
 
+    List<Establecimiento> findAllByComercio_Id(int idComercio);
 
 }
