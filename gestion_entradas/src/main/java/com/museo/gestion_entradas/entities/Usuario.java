@@ -18,7 +18,7 @@ public class Usuario {
     @Column(unique = true)
     private String username;
     private String password;
-    @Column(name = "rol", columnDefinition = "ENUM('ADMIN', 'VENDEDOR','SUPERADMIN')")
+    @Column(name = "rol", columnDefinition = "ENUM('ADMIN', 'CLIENTE','SUPERADMIN')")
     private String rol;
 
 }

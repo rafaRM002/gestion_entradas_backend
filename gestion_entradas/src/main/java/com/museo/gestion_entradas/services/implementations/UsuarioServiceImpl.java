@@ -5,6 +5,7 @@ import com.museo.gestion_entradas.repository.UsuarioRepository;
 import com.museo.gestion_entradas.services.UsuarioService;
 import org.hibernate.boot.jaxb.internal.UrlXmlSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -35,8 +36,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario findByUsername(String username) {
-        return null;
-
+        return usuarioRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuario no encontrado con username: " + username));
     }
 }
 

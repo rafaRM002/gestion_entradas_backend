@@ -43,5 +43,15 @@ public class UsuarioController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/username")
+    public ResponseEntity<Usuario> findByUsername(@RequestParam String username) {
+        Usuario usuario = usuarioService.findByUsername(username);
+        if (usuario != null) {
+            return ResponseEntity.ok(usuario);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 
 }
