@@ -4,6 +4,7 @@ import com.museo.gestion_entradas.entities.Comercio;
 import com.museo.gestion_entradas.entities.Entrada;
 import com.museo.gestion_entradas.services.implementations.ComercioServiceImpl;
 import com.museo.gestion_entradas.services.implementations.EntradaServiceImpl;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,5 +36,10 @@ public class ComercioController {
     @DeleteMapping("/{id}")
     public void DeleteComercio(@PathVariable int id) {
         this.comercioServiceImpl.eliminarComercio(id);
+    }
+
+    @GetMapping("/usuario/{username}")
+    public List<Comercio> getComerciosByUsername(@PathVariable String username) {
+        return comercioServiceImpl.getComerciosByUsername(username);
     }
 }

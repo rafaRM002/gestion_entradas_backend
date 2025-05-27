@@ -21,4 +21,6 @@ public interface ComercioService {
      * @Param recibe un comercio para su eliminacion
      */
     void eliminarComercio(int id);
+
+    List<Comercio> getComerciosByUsername(String username);
 }

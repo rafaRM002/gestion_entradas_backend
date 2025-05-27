@@ -38,4 +38,8 @@ public class ComercioServiceImpl implements ComercioService {
     @Override
     public void eliminarComercio(int id) {comercioRepository.deleteById(id);}
 
+    @Override
+    public List<Comercio> getComerciosByUsername(String username) {
+        return comercioRepository.findAllByUsuarioUsername(username);
+    }
 }
