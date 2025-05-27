@@ -35,4 +35,9 @@ public class ExtrasServiceImpl implements ExtrasService {
     @Override
     public void eliminarExtras(int id) {extrasRepository.deleteById(id);}
 
+    @Override
+    public List<Extras> getExtrasByEstablecimientoId(Integer establecimientoId) {
+        return extrasRepository.findAllByEstablecimientoId(establecimientoId);
+    }
+
 }

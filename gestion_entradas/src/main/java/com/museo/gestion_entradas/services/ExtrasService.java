@@ -27,4 +27,5 @@ public interface ExtrasService {
      */
     void eliminarExtras(int id);
 
+    List<Extras> getExtrasByEstablecimientoId(Integer establecimientoId);
 }

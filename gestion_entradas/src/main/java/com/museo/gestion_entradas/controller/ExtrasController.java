@@ -39,4 +39,9 @@ public class ExtrasController {
         this.extrasServiceImpl.eliminarExtras(id);
     }
 
+    @GetMapping("/establecimiento/{establecimientoId}")
+    public List<Extras> getExtrasByEstablecimiento(@PathVariable Integer establecimientoId) {
+        return extrasServiceImpl.getExtrasByEstablecimientoId(establecimientoId);
+    }
+
 }
