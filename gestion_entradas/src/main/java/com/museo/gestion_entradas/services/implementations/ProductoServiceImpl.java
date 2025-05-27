@@ -33,4 +33,9 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public void eliminarProducto(int id) {productoRepository.deleteById(id);}
 
+    @Override
+    public List<Producto> getProductosByEstablecimientoId(Integer establecimientoId) {
+        return productoRepository.findAllByEstablecimientoId(establecimientoId);
+    }
+
 }

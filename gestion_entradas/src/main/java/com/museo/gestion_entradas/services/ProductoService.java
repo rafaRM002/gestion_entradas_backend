@@ -25,4 +25,6 @@ public interface ProductoService {
      * @Param recibe un usuario para su eliminacion
      */
     void eliminarProducto(int id);
+
+    List<Producto> getProductosByEstablecimientoId(Integer establecimientoId);
 }

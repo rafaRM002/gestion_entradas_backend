@@ -36,5 +36,8 @@ public class ProductoController {
         this.productoServiceImpl.eliminarProducto(id);
     }
 
-
+    @GetMapping("/establecimiento/{establecimientoId}")
+    public List<Producto> getProductosByEstablecimiento(@PathVariable Integer establecimientoId) {
+        return productoServiceImpl.getProductosByEstablecimientoId(establecimientoId);
+    }
 }
