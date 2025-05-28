@@ -20,9 +20,11 @@ public class Entrada {
     private int id_entrada;
     private String nombre;
     private String descripcion;
-    private String tipo;
     private Double precio;
     private Date fecha;
+    @ManyToOne
+    @JoinColumn(name = "tipo_id", nullable = false)
+    private Tipo tipo;
     @ManyToOne
     @JoinColumn(name = "establecimiento_id", nullable = false)
     private Establecimiento establecimiento;
